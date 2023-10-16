@@ -1,0 +1,19 @@
+.gradient-bg-animation{
+    height:200px; /*La altura dependerá de lo que requieras*/
+    background: rgb(189, 189, 189); /*Usamos un background por defecto*/
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,143,38,1) 0%, rgba(150,126,197,1) 48%, rgba(0,255,222,1) 100%);
+    background-size: 300% 100%; /*Asignamos un ancho para el background del 300% y altura 100%*/
+    animation: gradient 15s ease infinite; /*'gradient' es el nombre de la animación que crearemos, tarda en completarse 15s y vuelve a empezar infinitamente*/
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

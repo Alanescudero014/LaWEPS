@@ -1,0 +1,35 @@
+-- Crear la base de datos
+CREATE DATABASE alan;
+
+-- Utilizar la base de datos creada
+USE alan;
+
+-- Tabla usuarios
+CREATE TABLE usuarios (
+  id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(50) NOT NULL,
+  contrasena VARCHAR(50) NOT NULL
+);
+
+-- Tabla pacientes
+CREATE TABLE pacientes (
+  id_paciente INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  fecha_nacimiento DATE NOT NULL,
+  sexo VARCHAR(10) NOT NULL,
+  curp VARCHAR(18) NOT NULL,
+  telefono VARCHAR(15) NOT NULL,
+  correo VARCHAR(100),
+  enfermedades_previas TEXT
+);
+
+-- Tabla citas
+CREATE TABLE citas (
+  id_cita INT PRIMARY KEY AUTO_INCREMENT,
+  id_paciente INT NOT NULL,
+  fecha DATE NOT NULL,
+  hora TIME NOT NULL,
+  motivo_consulta TEXT,
+  observaciones TEXT,
+  FOREIGN KEY (id_paciente) REFERENCES pacientes(id_paciente) ON DELETE CASCADE
+);

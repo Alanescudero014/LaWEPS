@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+</head>
+<style>
+    .kodfun-galeri{
+        display: flex;
+        height: 20rem;
+        gap: 1rem;
+    }
+    .kodfun-galeri > div{
+        flex: 1;
+        border-radius: 1rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    }
+    .kodfun-galeri > div:hover {
+        flex: 5;
+    }
+</style>
+<body>
+    <div class="kodfun-galeri">
+        <div style="background-image: url('../img/f1.jpg');"></div>
+        <div style="background-image: url('../img/hot.jpg');"></div>
+        <div style="background-image: url('../img/lam2.jpg');"></div>
+        <div style="background-image: url('../img/lam.jpg');"></div>
+        <div style="background-image: url('../img/lambo.jpg');"></div>
+    </div>
+</body>
+</html>
